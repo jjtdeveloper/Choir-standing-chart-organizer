@@ -24,3 +24,23 @@ input = [
     ["Tyren", "b2", (5, 5)],
     ["J'Viohn", "b2", (5, 10)]
     ]
+
+def separateSections(choir):
+    sections = []
+    splitSections = []
+    for person in choir:
+        try:
+            section = sections.index(person[1]) # Checks if a persons section exists already
+            sectionExists = True
+        except ValueError:
+            sectionExists = False
+            sections.append(person[1])
+        
+        if sectionExists:
+            splitSections[section].append(person) # If this person belongs to a section append them to that section
+        else:
+            splitSections.append([person])
+
+    return splitSections
+
+print(separateSections(masterSingers))
