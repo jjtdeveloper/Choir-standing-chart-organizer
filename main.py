@@ -43,4 +43,19 @@ def separateSections(choir):
 
     return splitSections
 
-print(separateSections(masterSingers))
+def organizeByHeight(splitChoir):
+    for section in splitChoir:
+        section.sort(key = lambda x: x[2])
+
+    return splitChoir
+
+splitChoir = separateSections(masterSingers)
+
+for section in splitChoir:
+    print(section)
+print("------------------------------------------------------")
+
+splitChoir = organizeByHeight(splitChoir)
+
+for section in splitChoir:
+    print(section)
