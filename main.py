@@ -2,7 +2,7 @@
 # Date: 2/28/20
 
 # input will be a list of all members names, section, and height
-input = [
+masterSingers = [
     ["Alex M", "t1", (6, 0)], 
     ["Lina", "s1", (5, 9)],
     ["Aiden", "b1", (5, 11)],
